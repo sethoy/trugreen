@@ -1,0 +1,596 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* Header Styles */
+.main-header {
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: 1px solid #f0f0f0; /* Subtle line to separate header */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between; /* Pushes logo left and phone right */
+    align-items: center;
+}
+
+/* Logo Styling */
+.logo {
+    font-size: 28px;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: -1px;
+    display: flex;
+    align-items: center;
+}
+
+.tru {
+    color: #006a39; /* Darker TruGreen green */
+}
+
+.green {
+    color: #00b359; /* Lighter green */
+}
+
+.leaf-icon {
+    font-style: normal;
+    font-size: 20px;
+    margin-left: 2px;
+}
+
+/* Contact Info Styling */
+.contact-info {
+    font-size: 18px;
+    color: #666;
+}
+
+.phone-number {
+    color: #006a39;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+/* Responsive adjustment for mobile */
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
+/* Hero Section Container */
+.hero {
+    background-color: #006a39; /* Deep TruGreen green */
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+/* The "Six Weeks FREE" Badge */
+.promo-badge {
+    border: 2px solid #00b359;
+    border-radius: 20px;
+    display: inline-block;
+    padding: 15px 30px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.promo-badge h1 {
+    font-size: 60px;
+    line-height: 1;
+    margin: 5px 0;
+}
+
+.leaf-small {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #006a39;
+    padding: 0 10px;
+}
+
+/* Typography */
+.hero-title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+/* Form Styling */
+.zip-form {
+    font-size: 20px;
+}
+
+.input-wrapper {
+    display: inline-block;
+    position: relative;
+    margin: 0 10px;
+}
+
+.zip-form input {
+    background-color: #004d2a; /* Darker input background */
+    border: none;
+    border-radius: 4px;
+    padding: 12px 40px 12px 15px;
+    color: white;
+    font-size: 18px;
+    width: 150px;
+    outline: none;
+}
+
+.zip-form input::placeholder {
+    color: #a0c4b1;
+}
+
+.location-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+}
+
+/* The Big Green Button */
+.cta-button {
+    display: block;
+    margin: 30px auto 10px;
+    background-color: #00b359;
+    color: white;
+    border: none;
+    padding: 18px 50px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #008f47;
+}
+
+.timer-text {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* Small screen adjustments */
+@media (max-width: 768px) {
+    .hero-title { font-size: 32px; }
+    .promo-badge h1 { font-size: 40px; }
+    .zip-form label { display: block; margin-bottom: 10px; }
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 80px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.section-title {
+    color: #006a39;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+/* Flexbox Grid */
+.testimonial-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    flex-wrap: wrap; /* Allows cards to stack on mobile */
+}
+
+/* Individual Cards */
+.testimonial-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 40px 30px;
+    flex: 1;
+    min-width: 300px;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.quote-icon {
+    color: #00b359;
+    font-size: 60px;
+    font-family: serif;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.testimonial-text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #444;
+    flex-grow: 1; /* Pushes author to the bottom */
+    margin-bottom: 20px;
+}
+
+.testimonial-author {
+    font-weight: bold;
+    color: #666;
+}
+
+/* Bottom Green Button */
+.secondary-cta {
+    background-color: #006a39;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Provide Feedback Sticky Tab */
+.feedback-tab {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+    transform-origin: left bottom;
+    background-color: #00b359;
+    color: white;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 0 0 5px 5px;
+    cursor: pointer;
+    z-index: 1000;
+}
+/* Services Section */
+.services {
+    background-color: #76c776; /* The lighter grass-green background */
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.services-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+.services-grid {
+    display: flex;
+    justify-content: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.service-item {
+    flex: 1;
+    padding: 10px;
+    max-width: 250px;
+}
+
+/* Icon Container (Hexagon Style) */
+.icon-hexagon {
+     
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(45deg); /* Rotates the square to look like a diamond */
+}
+
+.icon-hexagon img {
+    
+    transform: rotate(-45deg); /* Rotates the image back so it's upright */
+}
+
+/* Service Text */
+.service-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.service-item p {
+    font-size: 16px;
+    line-height: 1.4;
+    opacity: 0.95;
+}
+
+/* Tablet/Mobile View */
+@media (max-width: 768px) {
+    .services-grid {
+        flex-wrap: wrap;
+    }
+    .service-item {
+        flex: 0 0 45%; /* Two icons per row */
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-item {
+        flex: 0 0 100%; /* One icon per row */
+    }
+}
+
+/* Difference Section */
+.difference {
+    padding: 80px 20px 40px; /* More space on top, less on bottom for the gallery follow-up */
+    background-color: #ffffff;
+    text-align: center;
+}
+
+/* A smaller container to ensure the text doesn't span the whole screen width */
+.container-narrow {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.difference-title {
+    color: #006a39; /* The dark corporate green */
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.difference-text {
+    color: #4a4a4a; /* A soft dark grey for better readability */
+    font-size: 19px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+/* Tablet/Mobile tweak */
+@media (max-width: 768px) {
+    .difference-title {
+        font-size: 28px;
+    }
+    .difference-text {
+        font-size: 17px;
+        padding: 0 10px;
+    }
+}
+/* Gallery Container */
+.results-gallery {
+    padding: 40px 20px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+.gallery-grid {
+    display: grid;
+    /* This creates 3 columns of equal width */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px; /* Spacing between images */
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Individual Image Item */
+.comparison-item {
+    position: relative; /* Allows labels to be positioned inside */
+    line-height: 0;      /* Removes tiny gap at bottom of images */
+}
+
+.comparison-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* Optional: adds a very subtle rounded corner like the original */
+    border-radius: 2px;
+}
+
+/* Labels on the images */
+.label {
+    position: absolute;
+    bottom: 15px;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    /* Text shadow makes it readable against light green grass */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8); 
+    pointer-events: none; /* Clicks go through the text to the image */
+}
+
+.left {
+    left: 15px;
+}
+
+.right {
+    right: 15px;
+}
+
+/* Responsive: 2 columns on tablets, 1 column on phones */
+@media (max-width: 992px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    .label {
+        font-size: 12px;
+    }
+}
+
+/* Final CTA Section */
+.final-cta {
+    padding: 60px 0 0 0; /* No bottom padding to let the call bar hit the edge */
+    background-color: #fff;
+    text-align: center;
+}
+
+.cta-button-container {
+    margin-bottom: 60px;
+}
+
+.quote-btn-large {
+    background-color: #006a39;
+    color: white;
+    border: none;
+    padding: 20px 60px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 6px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.quote-btn-large:hover {
+    background-color: #004d2a;
+}
+
+/* Footer Bottom Row Layout */
+.footer-bottom-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Dark Green Call Bar */
+.call-bar {
+    background-color: #006a39;
+    color: white;
+    padding: 40px 60px;
+    flex: 1; /* Takes up space on the left */
+    text-align: right; /* Aligns text toward the logos */
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%); /* Optional: adds a slight slant if desired */
+}
+
+.call-text {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Logos Section */
+/* ...Previous Final CTA styles (Button, Call Bar, Flex Row) remain the same... */
+
+/* Logos Section (Updated to handle actual image scaling) */
+.trust-badges-images {
+    flex: 2; /* Takes up more space for the logos */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Vertically centers the different heights */
+    gap: 50px; /* Generous spacing between logos */
+    padding: 20px 40px;
+}
+
+/* Base style for the trust assets */
+.trust-image {
+    max-height: 55px; /* Adjust this to set the base size */
+    width: auto;
+    object-fit: contain; /* Ensures images don't stretch strangely */
+    display: block;
+}
+
+/* Specific scaling for the BBB image if needed, as it is often a different aspect ratio */
+.bbb-image {
+    max-height: 45px; /* Making it slightly smaller to match visual weight */
+}
+
+/* Mobile Responsive update for the new images class */
+@media (max-width: 900px) {
+    /* ...Other mobile styles remain... */
+    
+    .trust-badges-images {
+        gap: 20px;
+        flex-wrap: wrap;
+        padding: 30px;
+    }
+    .trust-image {
+        max-height: 40px; /* Shrink images on mobile */
+    }
+}
+/* Legal Footer Section */
+.legal-footer {
+    background-color: #404040; /* Dark charcoal background */
+    color: #cccccc; /* Light grey text for readability */
+    padding: 40px 20px;
+    font-family: sans-serif;
+    line-height: 1.6;
+}
+
+.legal-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.privacy-link {
+    color: #ffffff;
+    text-decoration: underline;
+    font-size: 14px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.legal-text {
+    font-size: 11px; /* Small "fine print" size */
+    margin-bottom: 15px;
+    opacity: 0.8;
+}
+
+.copyright-text {
+    font-size: 12px;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 20px 0 10px 0;
+}
+
+/* Superscript styling for the '2' */
+.legal-text sup {
+    font-size: 9px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .legal-footer {
+        padding: 30px 15px;
+    }
+    .legal-text {
+        font-size: 10px;
+        line-height: 1.4;
+    }
+}
