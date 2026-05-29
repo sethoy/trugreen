@@ -621,6 +621,5 @@ header .cta-section a,
 .footer-phone,
 .footer-socials a,
 .footer-links a {
-    position: relative;
-    z-index: 20; /* Sits completely on top of the overlay link layer */
+   
 }
